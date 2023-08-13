@@ -1,1 +1,1 @@
-# salt57
+# "Find your favorite acrylic stand" project
