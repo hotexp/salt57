@@ -37,7 +37,22 @@ a {
   font-size: 16px;
   margin-bottom: 40px;
 }
-
+/* 推しアクスタを探せ
+*/
+.QuizFrame {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: #61239b98;
+}
+.present_box  {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+}
+/*　共通
+*/
 .btn-wrapper {
   text-align: center;
 }
