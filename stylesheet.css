@@ -21,6 +21,7 @@ a {
   padding: 180px 0 100px 0;
   background-image: url(top.png);
   background-size: cover;
+  background-color: #2f239b98;
   color: white;
   text-align: center;
 }
@@ -96,6 +97,7 @@ header {
 .header-right {
   float: right;
   margin-right: -25px;
+  color: white;
 }
 
 .header-right a {
