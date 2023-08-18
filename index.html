@@ -7,41 +7,56 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
+  <div id=""></div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script>
+    var app = new Vue();
+  </script>
   <header>
     <div class="container">
       <div class="header-left">
+        <p>開発途中のページ<br>独学でプログラミングを学んでいきましょう。</p>
       </div>
       <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
-      <p>開発途中のページ<br>独学でプログラミングを学んでいきましょう。</p>
       </div>
     </div>
   </header>
   <div class="top-wrapper">
     <div class="container">
       <h1>XXXX<br>試してみよう</h1>
-      <p>最初にページレイアウトを設計</p>
     </div>
-    <div class="QuizFrame">
+    <div class="container">
+      <a>お名前</a>
+      <input type="text" id="name" name="name" autocomplete ></input>
+     </div>
+     <div class="container">
+      <p>下の4つの箱のどれかにアクスタが入っているよ。<br>
+      一つを選んで開けてみよう。</p>
+    </div>
+    <div class="msgbox">
+      <p>ここにメッセージ</p>
+    </div>    
+    <div class="Quiz-wrapper">
       <div class="present_box">
         <a>1.BOX</a>
         <button>BOX01</button>
       </div>
-      <div>
+      <div class="present_box">
         <a>2.BOX</a>
         <button>BOX02</button>
       </div>
-      <div>
+      <div class="present_box">
         <a>3.BOX</a>
         <button>BOX03</button>
       </div>
-      <div>
+      <div class="present_box">
         <a>4.BOX</a>
         <button>BOX04</button>
       </div>
     </div>
   </div>
-  <div>
+  <div class="Quiz-wrapper">
     <div>
       <img src="mark_batsu.png" width="80px" height="80px">
     </div>  
@@ -50,6 +65,9 @@
     </div>  
     <div>
       <img src="present_box.png" width="80px" height="80px">
+    </div>  
+    <div>
+      <img src="shio04.png" width="80px" height="80px">
     </div>  
   </div>
 </body>
