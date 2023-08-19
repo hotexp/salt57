@@ -11,7 +11,7 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <p>夏休み自由研究特設サイト<br>Ver.182</p>
+        <p>夏休み自由研究特設サイト<br>Ver.183</p>
       </div>
       <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
@@ -30,15 +30,16 @@
       <p>このページにようこそ。これを見ている君はシオさん推しに違いない。<br>下の4つの箱のどれかにアクスタが入っているよ。<br>
       一つを選んで開けてみよう。</p>
     </div>
-    <div v-if="gameSt==2">
+    <div class="container" v-if="gameSt==2">
       <button class="rep_button" @click="onRestrt()">★- もう一度遊ぶ。 -★</button>
     </div>
     <div class="msgbox">
       <p>--- メッセージ ---</p>
       <p v-if="gameSt==1">{{nameTx}}さん、流石です。<br>大好き！！！</p>
       <p v-if="gameSt==2">{{nameTx}}さん、残念惜しい。</p>
-      <p v-if="gameCount==5">失敗5回目です。{{nameTx}}さんでは当てられないのかもしれません。</p>
-      <p v-if="gameCount>=10">失敗{{gameCount}}回目です。{{nameTx}}さんでは当てられないのかもしれません。</p>
+      <p v-if="gameSt==2&&gameCount==5">失敗5回目です。{{nameTx}}さんでは当てられないのかもしれません。</p>
+      <p v-if="gameSt==2&&gameCount>=10">失敗{{gameCount}}回目です。<br>{{nameTx}}さんでは当てられないのかもしれません。</p>
+      <p v-if="gameSt==1&&gameCount>5">沢山遊んで頂きありがとうございます。</p>
     </div>
     <div class="debugBoc">
       <p>nameTx{{nameTx}}</p>
