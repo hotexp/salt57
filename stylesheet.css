@@ -54,6 +54,7 @@ a {
   margin: 2%;
   background-color: white;
   color: black;
+  overflow: hidden;/*はみ出したらトリミング*/
 }
 /*　メッセージボックス
 */
@@ -85,17 +86,115 @@ a {
   height: 80px;
   transition: all 300ms 0s ease;
 }
-.BoxImg00:active  {
-  width: 180px;
+/* .BoxImg01 {
+  width: 80px;
+  height: 80px;
+} */
+.present_box img{
+  width: 80px;
   height: 80px;
 }
+/*　アニメーション定義
+*/
+.BoxImg01 {
+  position:relative;
+}
+.BoxImg02 {
+  animation-duration: 2s;
+  animation-name: slidein01;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  position:relative;
+}
+.BoxImg11 {
+  animation-duration: 0.5s;
+  animation-name: slidein02;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  position:relative;
+}
+.BoxImg21 {
+  animation-duration: 1s;
+  animation-name: slidein02;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  position:relative;
+}
+.BoxImg31 {
+  animation-duration: 1.5s;
+  animation-name: slidein03;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  position:relative;
+}
+.BoxImg32 {
+  animation-duration: 3s;
+  animation-name: slidein13;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  position:relative;
+}
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+@keyframes slidein01 {/*上から下に動く*/
+  from {
+    top: 0px;
+    left:0px;
+  }
+  to {
+    top: 160px;
+    left:0px;
+  }
+}
+@keyframes slidein02 {/*下から上に動く*/
+  from {
+    top: 135px;
+    left:0px;
+  }
+  to {
+    top: -80px;
+    left:0px;
+  }
+}
+@keyframes slidein03 {/*下から上に動く あたりシオ*/
+  from {
+    top: 135px;
+    left:0px;
+  }
+  to {
+    top: -80px;
+    left:0px;
+  }
+}
+@keyframes slidein13 {/*下から上に動く　はずれシオ*/
+  from {
+    top: 250px;
+    left:0px;
+  }
+  to {
+    top: 80px;
+    left:0px;
+  }
+}
 /*　共通
 */
 .btn-wrapper {
   text-align: center;
 }
-
 .btn-wrapper p {
   margin-bottom: 20px;
 }

@@ -27,7 +27,7 @@
       <input type="text" id="name" name="name" autocomplete v-model="nameTxIn"></input>
      </div>
      <div class="container">
-      <p>このページにようこそ。これを見ている君はシオさん推しに違いない。<br>下の4つの箱のどれかにアクスタが入っているよ。<br>
+      <p>このページにようこそ。これを見ている君はシオさん推しに違いない。<br>下の4つの箱のどれかに推しアクスタが入っているよ。<br>
       一つを選んで開けてみよう。</p>
     </div>
     <div class="container" v-if="gameSt==2">
@@ -48,33 +48,50 @@
       <p>gameCount{{gameCount}}</p>
     </div>
     <div class="Quiz-wrapper">
+
       <div class="present_box" @click="onSelect(1)">
         <a>1.BOX</a>
-        <img v-if="boxSt[0]==0" class="BoxImg00" src="present_box.png" >
-        <img v-if="boxSt[0]==1" class="BoxImg00" src="mark_maru.png" >
-        <img v-if="boxSt[0]==2" class="BoxImg00" src="mark_batsu.png" >
-        <img v-if="atari==1" class="BoxImg00" src="shio04.png" >
+        <img v-if="boxSt[0]==0" class="BoxImg01"  src="present_box.png" >
+        <img v-if="boxSt[0]==1" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[0]==2" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[0]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[0]==1" class="BoxImg11" src="mark_maru.png" >
+        <img v-if="boxSt[0]==2" class="BoxImg21" src="mark_batsu.png" >
+        <img v-if="atari==1&&boxSt[0]==1" class="BoxImg31" src="shio04.png" >
+        <img v-if="atari==1&&boxSt[0]!=1" class="BoxImg32" src="shio04.png" >
       </div>
       <div class="present_box" @click="onSelect(2)">
         <a>2.BOX</a>
-        <img v-if="boxSt[1]==0" class="BoxImg00" src="present_box.png" >
-        <img v-if="boxSt[1]==1" class="BoxImg00" src="mark_maru.png" >
-        <img v-if="boxSt[1]==2" class="BoxImg00" src="mark_batsu.png" >
-        <img v-if="atari==2" class="BoxImg00" src="shio04.png" >
+        <img v-if="boxSt[1]==0" class="BoxImg01"  src="present_box.png" >
+        <img v-if="boxSt[1]==1" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[1]==2" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[1]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[1]==1" class="BoxImg11" src="mark_maru.png" >
+        <img v-if="boxSt[1]==2" class="BoxImg21" src="mark_batsu.png" >
+        <img v-if="atari==2&&boxSt[1]==1" class="BoxImg31" src="shio04.png" >
+        <img v-if="atari==2&&boxSt[1]!=1" class="BoxImg32" src="shio04.png" >
       </div>
       <div class="present_box" @click="onSelect(3)">
         <a>3.BOX</a>
-        <img v-if="boxSt[2]==0" class="BoxImg00" src="present_box.png" >
-        <img v-if="boxSt[2]==1" class="BoxImg00" src="mark_maru.png" >
-        <img v-if="boxSt[2]==2" class="BoxImg00" src="mark_batsu.png" >
-        <img v-if="atari==3" class="BoxImg00" src="shio04.png" >
+        <img v-if="boxSt[2]==0" class="BoxImg01"  src="present_box.png" >
+        <img v-if="boxSt[2]==1" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[2]==2" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[2]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[2]==1" class="BoxImg11" src="mark_maru.png" >
+        <img v-if="boxSt[2]==2" class="BoxImg21" src="mark_batsu.png" >
+        <img v-if="atari==3&&boxSt[2]==1" class="BoxImg31" src="shio04.png" >
+        <img v-if="atari==3&&boxSt[2]!=1" class="BoxImg32" src="shio04.png" >
       </div>
       <div class="present_box" @click="onSelect(4)">
         <a>4.BOX</a>
-        <img v-if="boxSt[3]==0" class="BoxImg00" src="present_box.png" >
-        <img v-if="boxSt[3]==1" class="BoxImg00" src="mark_maru.png" >
-        <img v-if="boxSt[3]==2" class="BoxImg00" src="mark_batsu.png" >
-        <img v-if="atari==4" class="BoxImg00" src="shio04.png" >
+        <img v-if="boxSt[3]==0" class="BoxImg01"  src="present_box.png" >
+        <img v-if="boxSt[3]==1" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[3]==2" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[3]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[3]==1" class="BoxImg11" src="mark_maru.png" >
+        <img v-if="boxSt[3]==2" class="BoxImg21" src="mark_batsu.png" >
+        <img v-if="atari==4&&boxSt[3]==1" class="BoxImg31" src="shio04.png" >
+        <img v-if="atari==4&&boxSt[3]!=1" class="BoxImg32" src="shio04.png" >
       </div>
     </div>
   </div>
