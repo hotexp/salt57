@@ -18,8 +18,8 @@ a {
 }
 
 .top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
+  padding: 80px 0 80px 0;
+  /* background-image: url(top.png); */
   background-size: cover;
   background-color: #2f239b98;
   color: white;
@@ -186,7 +186,7 @@ a {
     left:0px;
   }
   to {
-    top: 80px;
+    top: 0px;
     left:0px;
   }
 }

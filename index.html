@@ -11,7 +11,7 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <p>夏休み自由研究特設サイト<br>Ver.184</p>
+        <p>夏休み自由研究特設サイト<br>Ver.185</p>
       </div>
       <span class="fa fa-bars menu-icon"></span>
       <div class="header-right">
@@ -21,24 +21,26 @@
   <div class="top-wrapper">
     <div class="container">
       <h1>推しアクスタを探せ！！</h1>
+      <h2>みんなで推しの名前を覚えよう編</h2>
     </div>
     <div class="container">
-      <a>お名前</a>
+      <label>お名前
       <input type="text" id="name" name="name" autocomplete v-model="nameTxIn"></input>
+      さん</label>
      </div>
      <div class="container">
       <p>このページにようこそ。これを見ている君はシオさん推しに違いない。<br>下の4つの箱のどれかに推しアクスタが入っているよ。<br>
-      一つを選んで開けてみよう。</p>
+      一つを選んで開けてみよう。<br>※名前を入力して遊んでね。</p>
     </div>
     <div class="container" v-if="gameSt==2">
       <button class="rep_button" @click="onRestrt()">★- もう一度遊ぶ。 -★</button>
     </div>
     <div class="msgbox">
       <p>--- メッセージ ---</p>
-      <p v-if="gameSt==1">{{nameTx}}さん、流石です。<br>大好き！！！</p>
+      <p v-if="gameSt==1">{{nameTx}}さん！！流石です。<br>素敵。大好き！！！</p>
       <p v-if="gameSt==2">{{nameTx}}さん、残念惜しい。</p>
       <p v-if="gameSt==2&&gameCount==5">失敗5回目です。{{nameTx}}さんでは当てられないのかもしれません。</p>
-      <p v-if="gameSt==2&&gameCount>=10">失敗{{gameCount}}回目です。<br>{{nameTx}}さんでは当てられないのかもしれません。</p>
+      <p v-if="gameSt==2&&gameCount>=10">失敗{{gameCount}}回目です。<br>{{nameTx}}さんでは当てられないのかもしれません。<br>推しの名前を入力して遊んでね。</p>
       <p v-if="gameSt==1&&gameCount>5">沢山遊んで頂きありがとうございます。</p>
     </div>
     <div class="debugBoc">
@@ -55,6 +57,7 @@
         <img v-if="boxSt[0]==1" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[0]==2" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[0]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[0]==4" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[0]==1" class="BoxImg11" src="mark_maru.png" >
         <img v-if="boxSt[0]==2" class="BoxImg21" src="mark_batsu.png" >
         <img v-if="atari==1&&boxSt[0]==1" class="BoxImg31" src="shio04.png" >
@@ -66,6 +69,7 @@
         <img v-if="boxSt[1]==1" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[1]==2" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[1]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[1]==4" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[1]==1" class="BoxImg11" src="mark_maru.png" >
         <img v-if="boxSt[1]==2" class="BoxImg21" src="mark_batsu.png" >
         <img v-if="atari==2&&boxSt[1]==1" class="BoxImg31" src="shio04.png" >
@@ -77,6 +81,7 @@
         <img v-if="boxSt[2]==1" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[2]==2" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[2]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[2]==4" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[2]==1" class="BoxImg11" src="mark_maru.png" >
         <img v-if="boxSt[2]==2" class="BoxImg21" src="mark_batsu.png" >
         <img v-if="atari==3&&boxSt[2]==1" class="BoxImg31" src="shio04.png" >
@@ -88,6 +93,7 @@
         <img v-if="boxSt[3]==1" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[3]==2" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[3]==3" class="BoxImg02"  src="present_box.png" >
+        <img v-if="boxSt[3]==4" class="BoxImg02"  src="present_box.png" >
         <img v-if="boxSt[3]==1" class="BoxImg11" src="mark_maru.png" >
         <img v-if="boxSt[3]==2" class="BoxImg21" src="mark_batsu.png" >
         <img v-if="atari==4&&boxSt[3]==1" class="BoxImg31" src="shio04.png" >
